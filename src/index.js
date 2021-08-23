@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//Css antd
+import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
+//Cấu hình redux
+import {Provider} from 'react-redux'
+import {store} from './redux/configStore'
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
